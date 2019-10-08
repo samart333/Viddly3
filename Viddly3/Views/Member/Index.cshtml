@@ -1,0 +1,39 @@
+﻿@model List<Viddly3.Models.Member>
+@{
+    ViewBag.Title = "Index";
+}
+
+@if (!Model.Any())
+{
+    <p>we don't have any customers yet.</p>
+}
+else
+{
+    
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Member</th>
+                    <th scope="col">Membership Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var Member in Model)
+                {
+                    //if(Member.MembershipTypeId == Member.MembershipType.Id)
+                    //{
+                    //    Member.MembershipType.Name = MembershipType.Name
+                    //}
+                <tr>
+                    <td><a href="@Url.Action("Edit", "Member", new { id = Member.Id })">@Member.Name</a></td>
+                  
+                    
+                    <td>@Member.MembershipType.Name</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+
+     
+}

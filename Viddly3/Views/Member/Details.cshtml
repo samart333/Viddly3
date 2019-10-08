@@ -1,0 +1,19 @@
+﻿@model Viddly3.Models.Member
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<h1>@Model.Name</h1>
+
+<h2>Age: @Model.Age</h2>
+<h2>Company: @Model.Company</h2>
+<h2>Sex: @Model.Sex</h2>
+<h2>Membership Type: @Model.MembershipType.Name</h2>
+
+<h2>Birth Date: @if (Model.BirthDate != null)
+{
+    @Model.BirthDate
+}
+</h2>

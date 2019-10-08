@@ -104,6 +104,7 @@ namespace Viddly3.Controllers
         public ActionResult Details(int id)
         {
             int cars = 3;
+            int buses = 2;
             var movies = _context.Movies.Include(c => c.Genres).ToList();
             var SelectedMovie = new Movie { };
 

@@ -103,6 +103,7 @@ namespace Viddly3.Controllers
         // GET: Movie/Details
         public ActionResult Details(int id)
         {
+            int cars = 3;
             var movies = _context.Movies.Include(c => c.Genres).ToList();
             var SelectedMovie = new Movie { };
 
